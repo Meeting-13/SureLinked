@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surelink - Shop Smart. Shop Sure.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'surelink-blue': '#2563eb',
+                        'surelink-dark': '#1e293b',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .testimonial-carousel {
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+        .testimonial-slide {
+            scroll-snap-align: start;
+            min-width: 100%;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .hero-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1607082350899-7e105aa886ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-slate-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-surelink-blue flex items-center justify-center mr-3">
+                        <span class="text-white font-bold text-xl">S</span>
+                    </div>
+                    <h1 class="text-2xl font-bold text-surelink-blue">Surelink</h1>
+                </div>
+                <nav class="hidden md:flex ml-12 space-x-8">
+                    <a href="#" class="font-medium text-surelink-blue border-b-2 border-surelink-blue pb-1">Home</a>
+                    <a href="#" class="font-medium hover:text-surelink-blue transition-colors">Shop</a>
+                    <a href="#" class="font-medium hover:text-surelink-blue transition-colors">Contact</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#" class="hover:text-surelink-blue">
+                    <i class="fas fa-user text-xl"></i>
+                </a>
+                <a href="#" class="hover:text-surelink-blue">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner py-20 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Shop Smart. Shop Sure.</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Discover quality products at unbeatable prices with fast delivery across Nigeria</p>
+            <a href="#" class="inline-block bg-surelink-blue hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors shadow-lg">
+                Start Shopping <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Browse Categories</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Category Cards -->
+                <a href="#" class="category-card block bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-2xl text-surelink-blue"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Electronics</h3>
+                </a>
+                
+                <a href="#" class="category-card block bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tshirt text-2xl text-pink-500"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Fashion</h3>
+                </a>
+                
+                <a href="#" class="category-card block bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-home text-2xl text-green-500"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Home & Living</h3>
+                </a>
+                
+                <a href="#" class="category-card block bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-baby text-2xl text-yellow-500"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Baby & Kids</h3>
+                </a>
+                
+                <a href="#" class="category-card block bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-laptop text-2xl text-purple-500"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Tech & Office</h3>
+                </a>
+                
+                <a href="#" class="category-card block bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 border border-gray-100">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-ellipsis-h text-2xl text-indigo-500"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">More...</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="py-16 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">What Our Customers Say</h2>
+            <p class="text-center text-gray-600 mb-12">Don't just take our word for it</p>
+            
+            <div class="relative max-w-4xl mx-auto">
+                <div class="testimonial-carousel flex overflow-x-auto scrollbar-hide snap-x" id="testimonialCarousel">
+                    <!-- Testimonial Slides -->
+                    <div class="testimonial-slide flex-shrink-0 p-6">
+                        <div class="bg-white rounded-xl p-8 shadow-sm">
+                            <div class="flex text-yellow-400 mb-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-lg italic mb-6">"Great quality and fast delivery! I ordered a smartphone and received it within 24 hours. The product was exactly as described and packaged securely."</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mr-4">
+                                    <span class="font-bold">J</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Jane O.</h4>
+                                    <p class="text-gray-600">Lagos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide flex-shrink-0 p-6">
+                        <div class="bg-white rounded-xl p-8 shadow-sm">
+                            <div class="flex text-yellow-400 mb-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-lg italic mb-6">"Surelink is my go-to store! Their customer service is exceptional. When I had an issue with my order, they resolved it immediately. Highly recommend!"</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mr-4">
+                                    <span class="font-bold">T</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Tunde A.</h4>
+                                    <p class="text-gray-600">Abuja</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide flex-shrink-0 p-6">
+                        <div class="bg-white rounded-xl p-8 shadow-sm">
+                            <div class="flex text-yellow-400 mb-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="text-lg italic mb-6">"I've been shopping with Surelink for over a year now. Their prices are competitive and the quality of products is consistently good. Fast delivery to Port Harcourt too!"</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center mr-4">
+                                    <span class="font-bold">C</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Chika M.</h4>
+                                    <p class="text-gray-600">Port Harcourt</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Dots -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="w-3 h-3 rounded-full bg-surelink-blue testimonial-dot active"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-300 testimonial-dot"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-300 testimonial-dot"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+                    <p class="text-gray-600 mb-8">Have questions or need assistance? Our support team is ready to help you with any inquiries.</p>
+                    
+                    <div class="space-y-5">
+                        <div class="flex items-start">
+                            <div class="text-surelink-blue text-2xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Email Us</h3>
+                                <p class="text-gray-600">support@surelink.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-surelink-blue text-2xl mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Call Us</h3>
+                                <p class="text-gray-600">+234 812 345 6789</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-surelink-blue text-2xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Visit Us</h3>
+                                <p class="text-gray-600">123 Market Street, Port Harcourt, Nigeria</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-surelink-blue text-2xl mr-4 mt-1">
+                                <i class="fas fa-hashtag"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Follow Us</h3>
+                                <div class="flex space-x-4 mt-2">
+                                    <a href="#" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-slate-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6">Send us a message</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="name">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-surelink-blue focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="email">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-surelink-blue focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 mb-2" for="message">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-surelink-blue focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-surelink-blue hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surelink-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-lg bg-surelink-blue flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-xl">S</span>
+                        </div>
+                        <h2 class="text-2xl font-bold">Surelink</h2>
+                    </div>
+                    <p class="mt-4 text-gray-400 max-w-md">Your trusted online marketplace for quality products at competitive prices with reliable delivery across Nigeria.</p>
+                </div>
+                
+                <div class="flex space-x-8">
+                    <div>
+                        <h3 class="font-bold mb-4">Quick Links</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Shop</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold mb-4">Customer Care</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white transition-colors">FAQs</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Shipping Policy</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Returns & Refunds</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Track Order</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">© 2025 Surelink — Powered by <span class="text-blue-400">Flutterwave</span></p>
+                <div class="flex space-x-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png" alt="Mastercard" class="h-8">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/800px-Visa_Inc._logo.svg.png" alt="Visa" class="h-8">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Former_Flutterwave_logo.svg/2560px-Former_Flutterwave_logo.svg.png" alt="Flutterwave" class="h-8">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Testimonial Carousel
+        const carousel = document.getElementById('testimonialCarousel');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        let currentSlide = 0;
+        
+        function showSlide(index) {
+            // Update carousel position
+            carousel.scrollTo({
+                left: index * carousel.offsetWidth,
+                behavior: 'smooth'
+            });
+            
+            // Update active dot
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('bg-surelink-blue', i === index);
+                dot.classList.toggle('bg-gray-300', i !== index);
+            });
+            
+            currentSlide = index;
+        }
+        
+        // Initialize dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+        
+        // Auto-advance carousel
+        setInterval(() => {
+            const nextSlide = (currentSlide + 1) % dots.length;
+            showSlide(nextSlide);
+        }, 5000);
+        
+        // Initial slide
+        showSlide(0);
+    </script>
+</body>
+</html>
